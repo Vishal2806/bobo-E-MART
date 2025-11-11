@@ -5,6 +5,7 @@ export interface NewUserRequestBody {
   email: string;
   photo: string;
   gender: string;
+  password : string;
   _id: string;
   dob: Date;
 }

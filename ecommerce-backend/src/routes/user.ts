@@ -3,6 +3,7 @@ import {
   deleteUser,
   getAllUsers,
   getUser,
+  loginUser,
   newUser,
 } from "../controllers/user.js";
 import { adminOnly } from "../middlewares/auth.js";
@@ -10,6 +11,7 @@ import { adminOnly } from "../middlewares/auth.js";
 const app = express.Router();
 
 // route - /api/v1/user/new
+app.get("/login", loginUser);
 app.post("/new", newUser);
 
 // Route - /api/v1/user/all
